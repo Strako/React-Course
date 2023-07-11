@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import FirstPage from './Pages/MyFisrtPage'
 import InputField from './Components/Inputs/InputField'
-import todoModel from './Models/todoModel'
+import todoModel from './Models/TodoModel'
 import './App.css'
+import TodoList from './Components/List/TodoList';
 
 
 const App = (): JSX.Element => {
@@ -27,11 +28,12 @@ const App = (): JSX.Element => {
         <span className="heading" style={{ color: "white" }}>Taskify!</span>
         <InputField todo ={todo} setTodo = {setTodo} handleAdd ={handleAdd}/>
         <span style={{color: "white"}}>{}</span>
+        <TodoList todos = {todos} setTodos = {setTodos}/>
       </div>
 
     </>
-  )
-}
+  );
+};
 
 export default App;
 
