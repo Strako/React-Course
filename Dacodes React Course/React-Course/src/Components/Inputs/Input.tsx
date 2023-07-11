@@ -1,26 +1,21 @@
 import { Fragment, useState} from "react"; 
 
 interface InputI{
-    name?: string
-    placeholder?: string
-    isAdmin?: boolean
+    name?: string;
+    placeholder?: string;
+    isAdmin?: boolean;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>)=> void;
+    value?: string;
 }
 
-const Input = ({ name, placeholder, isAdmin}: InputI) =>{
-    
-    const [value, setValue] = useState("");
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>{
-        setValue(e.target.value);
-    };
-
-    console.log(value)
-    console.log(isAdmin)
-    if(isAdmin = true) return null
+const Input = ({ name, placeholder, isAdmin, value, onChange}: InputI) =>{
+    if(isAdmin = false) return null
     return(
         <div>
-            <label>{value}</label>
-            <input placeholder={placeholder} name={name} value={value} onChange = {handleChange}/>
+            <input placeholder={placeholder} 
+            name={name} 
+            value={value} 
+            onChange = {onChange}/>
         </div>
     );
 

@@ -1,4 +1,5 @@
 import React, { Children } from "react";
+import './AuthTemplate.css'
 
 interface AuthTemplateI{
     children: React.ReactNode
@@ -6,9 +7,14 @@ interface AuthTemplateI{
 
 const AuthTemplate = ({children}: AuthTemplateI) =>{
     return(
-    <div>
-        Esto es un AuthTemplate
-        {children}
+    <div className = "auth-template">
+        <div className = "navbar">
+            <h1>Navbar</h1>
+        </div>
+        <div className ="body">{children}</div>
+        <div className = "footer-container">
+            <h1>Footer</h1>
+        </div>
     </div>
     );
 };

@@ -33,7 +33,7 @@ function FirstPage() {
   };
 
   //add aspace between array elements
-  let myHobbies = (list: string[]): string => {
+  const myHobbies = (list: string[]): string => {
     let result: string = "";
     for (let i = 0; i < list.length; i++) {
       if (i == list.length - 1) {

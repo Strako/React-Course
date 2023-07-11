@@ -1,0 +1,38 @@
+.auth-template{
+
+}
+
+h1{
+    margin: auto    ;
+}
+.auth-template .body{
+    height: calc(100vh - 200px);
+    overflow: hidden;
+    padding: 5%;
+
+}
+
+.auth-template .navbar{
+    padding:0%;
+    height: 80px;
+    width: 100%;
+    background-color: beige;
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    overflow:hidden;
+}
+
+.auth-template .footer-container{
+    height: 120px;
+    width: 100%;
+    background-color: aqua;
+    position: absolute;
+    top:100%;
+    bottom:0;
+    right:0;
+    left:0;
+    overflow:hidden;
+}

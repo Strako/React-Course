@@ -5,14 +5,17 @@ import './App.css'
 import Login from './Pages/Auth/Login/Login'
 import './styles/style.css'
 import ForgotPassword from './Pages/Auth/ForgotPassword/ForgotPassword'
+import AuthTemplate from './templates/AuthTemplate/AuthTemplate'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <AuthTemplate>
     <Login/>
     <ForgotPassword/>
+    </AuthTemplate>
     </>
   )
 }
