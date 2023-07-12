@@ -1,0 +1,9 @@
+#root, html{
+    background: #03067B;
+    
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

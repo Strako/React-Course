@@ -1,21 +1,21 @@
-import { Fragment, useState} from "react"; 
+import './Input.css'
 
-interface InputI{
+interface InputI {
+    type: string;
     name?: string;
     placeholder?: string;
-    isAdmin?: boolean;
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>)=> void;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     value?: string;
 }
 
-const Input = ({ name, placeholder, isAdmin, value, onChange}: InputI) =>{
-    if(isAdmin = false) return null
-    return(
-        <div>
-            <input placeholder={placeholder} 
-            name={name} 
-            value={value} 
-            onChange = {onChange}/>
+const Input = ({ type, name, placeholder, value, onChange }: InputI) => {
+    return (
+        <div className = "input-group">
+            <label className = "input-label">{name}</label>
+            <input className="input" type={type} placeholder={placeholder}
+                name={name}
+                value={value}
+                onChange={onChange} />
         </div>
     );
 
