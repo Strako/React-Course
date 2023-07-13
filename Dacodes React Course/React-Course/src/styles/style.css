@@ -1,9 +1,11 @@
 #root, html{
     background: #03067B;
+    overflow-x:hidden;
     
 }
 body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
 }

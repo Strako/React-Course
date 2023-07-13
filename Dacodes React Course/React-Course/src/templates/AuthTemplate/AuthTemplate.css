@@ -1,9 +1,9 @@
 .auth-template .navbar-container {
-    position:absolute;
+    position:fixed;
     display: flex;
     justify-content: center;
     height: 80px;
-    width: 100%;
+    width: 100vw;
     background: #5141EA;
     top: 0;
     bottom: 0;
@@ -12,14 +12,27 @@
 }
 
 .auth-template .navbar-container .navbar-logo {
-    position: relative;
-    width: 172px;
-    height: 68px;
+    position: absolute;
+    width: 114.67px;
+    height: 45.33px;
     top: 50%;
     bottom: 0;
     right: 0;
-    left: -405px;
+    left: 187px;
     transform: translate(-50%, -50%);
+
+}
+
+
+.auth-template .navbar-container .navbar-user-icon {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 50px;
+
+
 
 }
 
@@ -31,25 +44,27 @@
 }
 
 .container .body {
-    padding: 12% 0 250px 135px;
+    padding: 175px 0 250px 115px;
     display: flex;
 }
 
 
 
 .auth-template .footer-container {
+    z-index: -1;
     position: absolute;
     min-height: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
-    left: -10px;
+    left: 0px;
 
 }
 
 
 .auth-template .footer-image {
-    max-width:100%;
+
+    width: 100vw;
 }
 
 .footer-logos {
@@ -58,6 +73,6 @@
     bottom: 0;
     left: 7%;
     right: 0;
-    max-width: 70%;
+    width: 70vw;
 
 }

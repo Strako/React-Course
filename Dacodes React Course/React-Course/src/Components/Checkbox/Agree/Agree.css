@@ -1,10 +1,11 @@
 .agree-container{
-    padding-left: 25px;
+    padding-top: 25px;
+    padding-left: 20px;
 }
 .agree-text {
     color: #FFF;
     font-family: Poppins;
-    font-size: 20px;
+    font-size: 18px;
     font-style: italic;
     font-weight: 400;
     line-height: 120%;

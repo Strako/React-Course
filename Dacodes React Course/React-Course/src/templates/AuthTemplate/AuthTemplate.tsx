@@ -2,6 +2,7 @@ import React, { Children, useEffect, useRef } from "react";
 import Footer from '../../Images/Footer.png'
 import FooterLogos from '../../Images/FooterLogos.png'
 import DacodesLogo from '../../Images/DacodesLogo .png'
+import UserIcon from '../../Images/usericon.png'
 import './AuthTemplate.css'
 
 interface AuthTemplateI {
@@ -16,6 +17,7 @@ const AuthTemplate = ({ children }: AuthTemplateI) => {
 
             <div className="navbar-container">
                 <img className="navbar-logo" src={DacodesLogo} alt="Dacodes Logo" />
+                <img className="navbar-user-icon" src={UserIcon} alt="Dacodes Logo" />
             </div>
 
             <div className="container">
