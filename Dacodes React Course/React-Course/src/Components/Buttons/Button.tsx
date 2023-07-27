@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from "react";
 import './Button.css'
-const Button = ({ disable }: { disable: boolean }) => {
+import { useNavigate } from "react-router-dom";
+
+interface buttonProps {
+    disable: boolean,
+}
+
+const Button = ({ disable }: buttonProps) => {
     const [value, setValue] = useState(0);
-
-    useEffect(() => {
-        console.log("Mi value", value)
-    }, [value]);
-
-
-    const handleClick = () => {
-        setValue(prev => prev + 1);
+    const navigate = useNavigate();
+    const handleLogin = () => {
+        if (sessionStorage.getItem('key') !== null) {
+            navigate('/example');
+        }
     }
     return (
         <div className="button-container">
-            <button className="button-icon" disabled={disable} onClick={handleClick}>Crear cuenta{value}</button>;
+            <button className="button-icon" disabled={disable} onClick={handleLogin}>Crear cuenta{value}</button>
         </div>
     );
 };

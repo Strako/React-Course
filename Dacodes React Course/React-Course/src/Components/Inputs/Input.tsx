@@ -10,8 +10,8 @@ interface InputI {
 
 const Input = ({ type, name, placeholder, value, onChange }: InputI) => {
     return (
-        <div className = "input-group">
-            <label className = "input-label">{name}</label>
+        <div className="input-group">
+            <label className="input-label">{name}</label>
             <input className="input" type={type} placeholder={placeholder}
                 name={name}
                 value={value}

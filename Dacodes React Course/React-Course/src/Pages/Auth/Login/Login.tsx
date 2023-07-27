@@ -5,22 +5,36 @@ import { useState } from "react";
 import './Login.css'
 
 const Login = () => {
+    //Consts
     const [agreeStatus, setAgree] = useState<boolean>(false);
 
     const [email, setEmail] = useState("");
 
+    const [password, setPassword] = useState("");
+
+    //Handlers
     const handleChangeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(e.target.value);
     };
 
+    const handleChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setPassword(e.target.value);
+    };
+
+    //Checks
     const checkEmail = () => {
         const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
         return !emailRegex.test(email);
     };
 
-    const checkAgree = (email: boolean) => {
+    const checkPassword = () => {
+        const passwordRegex = /(.){7}/;
+        return passwordRegex.test(password);
+    };
+
+    const checkAgree = (email: boolean, password: boolean) => {
         let result: boolean;
-        if (email === false && agreeStatus === true) {
+        if (email === false && password === true && agreeStatus === true) {
             result = false;
             console.log("A", result);
 
@@ -33,8 +47,10 @@ const Login = () => {
     };
 
 
-    console.log("Agree status", agreeStatus);
-    console.log("Mail status", checkEmail());
+    //  console.log("Agree status", agreeStatus);
+    //  console.log("Mail status", checkEmail());
+
+
     return (
         <div className="container">
             <div className="login-title">
@@ -52,10 +68,12 @@ const Login = () => {
                 <Input
                     type='password'
                     name='Contraseña'
-                    placeholder='Password' />
+                    placeholder='Password'
+                    onChange={handleChangePassword}
+                    value={password} />
 
                 <Agree agreeStatus={agreeStatus} setAgree={setAgree} />
-                <Button disable={checkAgree(checkEmail())} />
+                <Button disable={checkAgree(checkEmail(), checkPassword())} />
             </div>
         </div>
     );

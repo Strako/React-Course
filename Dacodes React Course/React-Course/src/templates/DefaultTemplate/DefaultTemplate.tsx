@@ -3,13 +3,13 @@ import Footer from '../../Images/Footer.png'
 import FooterLogos from '../../Images/FooterLogos.png'
 import DacodesLogo from '../../Images/DacodesLogo .png'
 import UserIcon from '../../Images/usericon.png'
-import './AuthTemplate.css'
+import './DefaultTemplate.css'
 
 interface AuthTemplateI {
     children: React.ReactNode
 }
 
-const AuthTemplate = ({ children }: AuthTemplateI) => {
+const DefaultTemplate = ({ children }: AuthTemplateI) => {
 
 
     return (
@@ -32,5 +32,5 @@ const AuthTemplate = ({ children }: AuthTemplateI) => {
     );
 };
 
-AuthTemplate.displayName = 'AuthTemplate'
-export default AuthTemplate;
+DefaultTemplate.displayName = 'DefaultTemplate'
+export default DefaultTemplate;
