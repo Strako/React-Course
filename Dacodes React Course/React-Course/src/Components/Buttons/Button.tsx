@@ -7,16 +7,16 @@ interface buttonProps {
 }
 
 const Button = ({ disable }: buttonProps) => {
-    const [value, setValue] = useState(0);
     const navigate = useNavigate();
     const handleLogin = () => {
         if (sessionStorage.getItem('key') !== null) {
             navigate('/example');
+            window.scrollTo(0, 0);
         }
     }
     return (
         <div className="button-container">
-            <button className="button-icon" disabled={disable} onClick={handleLogin}>Crear cuenta{value}</button>
+            <button className="button-icon" disabled={disable} onClick={handleLogin}>Crear cuenta</button>
         </div>
     );
 };
