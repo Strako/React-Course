@@ -9,7 +9,8 @@ interface buttonProps {
 const Button = ({ disable }: buttonProps) => {
     const navigate = useNavigate();
     const handleLogin = () => {
-        if (sessionStorage.getItem('key') !== null) {
+        if (sessionStorage.getItem('key') !== "") {
+            console.log(sessionStorage.getItem('key'))
             navigate('/example');
             window.scrollTo(0, 0);
         }
