@@ -5,7 +5,9 @@ import { useState } from "react";
 import './Login.css'
 
 const Login = () => {
-    
+    //Save token in session storage
+    sessionStorage.setItem("api_token", "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYTY3NDEyYjFjNTBlYmVmOTg4MjBlM2I4NzFiNDRhNSIsInN1YiI6IjY0Yzk5ODc2MGNiMzM1MDBjNTY4ODRmMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ymgBK70hX-AoJNJuVT2fjTDG7YbiV5B_hLnvPoDUQxI");
+
     //Consts
     const [agreeStatus, setAgree] = useState<boolean>(false);
 
