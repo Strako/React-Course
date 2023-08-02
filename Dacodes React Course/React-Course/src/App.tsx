@@ -1,29 +1,27 @@
 import './App.css'
-import Login from './Pages/Auth/Login/Login'
-import './styles/style.css'
-import AuthTemplate from './templates/DefaultTemplate/DefaultTemplate'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import NotFound from './Pages/Notfound/Notfound'
-import Example from './Pages/Example/Example'
+import AuthTemplate from './templates/DefaultTemplate/DefaultTemplate'
+import Login from './Pages/Auth/Login/Login'
+import Movies from './Pages/Movies/Movies'
+import Notfound from './Pages/Notfound/Notfound'
+import './styles/style.css'
+import { useState } from 'react'
+
 function App() {
+const [isAuthetcicated, setIsAuthenticated] = useState(false);
+
+
+
   return (
-    <BrowserRouter>
-      <AuthTemplate>
+    <AuthTemplate>
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={
-            <Login />
-          } />
-          <Route path="*" element={
-            <NotFound />
-          } />
-          <Route path="/example" element={
-            <Example />
-          } />
+          <Route path="/" element={<Login />} />
+          <Route path="/movies" element={<Movies/>} />
+          <Route path="*" element={<Notfound/>} />
         </Routes>
-      </AuthTemplate>
-
-    </BrowserRouter>
-
+      </BrowserRouter>
+    </AuthTemplate>
   )
 }
 
