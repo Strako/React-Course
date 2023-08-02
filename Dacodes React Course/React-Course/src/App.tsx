@@ -8,8 +8,11 @@ import './styles/style.css'
 import { useState } from 'react'
 
 function App() {
-const [isAuthetcicated, setIsAuthenticated] = useState(false);
+//const [isAuthetcicated, setIsAuthenticated] = useState(false);
 
+//if(sessionStorage.getItem("guest_session_id") !== null){
+//  setIsAuthenticated(true);
+//}
 
 
   return (
