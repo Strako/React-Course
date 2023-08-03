@@ -1,0 +1,16 @@
+.movie_card{
+    width: 253px;
+    height: 367px;
+    top: 650px;
+    left: 742px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin: 1.3%;
+}
+.movies{
+    padding-top: 10%;
+    padding-left: 5%;
+}
+.movie_card:hover{
+    opacity: 20%;
+}
