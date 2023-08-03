@@ -35,17 +35,23 @@ const Movies = () => {
 
   const listMovies = () => {
     const listingComponents = response.results.map((movie: objectI) => (
-
-      <img className="movie_card" src={posterEP + movie.poster_path} />
+      <div className="movie_card">
+        <img src={posterEP + movie.poster_path} />
+        <div className="movie_cover">
+          <p >Lorem ipsum dolor sit amet.</p>
+          <p >Lorem ipsum dolor sit amet.</p>
+          <p >Lorem ipsum dolor sit amet.</p>
+          <p >Lorem ipsum dolor sit amet.</p>
+        </div>
+      </div>
     ))
     return listingComponents;
   }
 
   return (
-    <div className="movies">
-      {listMovies()}
+    <div className='movies'>
+    {listMovies()}
     </div>
-
   );
 }
 
