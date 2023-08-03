@@ -5,23 +5,25 @@ import Login from './Pages/Auth/Login/Login'
 import Movies from './Pages/Movies/Movies'
 import Notfound from './Pages/Notfound/Notfound'
 import './styles/style.css'
-import { useState } from 'react'
+import ProtectedRoute from './Routes/ProtectedRoute'
+import PublicRoute from './Routes/PublicRoute'
 
 function App() {
-//const [isAuthetcicated, setIsAuthenticated] = useState(false);
-
-//if(sessionStorage.getItem("guest_session_id") !== null){
-//  setIsAuthenticated(true);
-//}
-
-
   return (
     <AuthTemplate>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/movies" element={<Movies/>} />
-          <Route path="*" element={<Notfound/>} />
+          <Route element={<PublicRoute />}>
+              <Route path="/" element={<Login />} />
+           </Route>
+
+
+          <Route element={<ProtectedRoute />}>
+            <Route path="/movies" element={<Movies />} />
+          </Route>
+
+          <Route path="*" element={<Notfound />} />
+
         </Routes>
       </BrowserRouter>
     </AuthTemplate>
