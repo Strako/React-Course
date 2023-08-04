@@ -1,0 +1,46 @@
+.movies{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    column-gap:2rem;
+    row-gap:2rem;
+    flex-wrap:wrap;
+    padding-right: 10%;
+}
+
+.movie_card{
+    display: flex;
+    justify-content: center;
+    width: 253px;
+    height: 367px;
+    background-color: white;
+    border-radius: 50px;
+    overflow: hidden;
+
+}
+
+.movie_card img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.movie_card:hover .movie_cover{
+    opacity:100%;
+}
+
+.movie_card .movie_cover{
+    position: absolute;
+    display: flex;
+    width: 253px;
+    height: 367px;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    opacity: 0%;
+    transition: .3s;
+    flex-direction: column;
+    font-size: 18px;
+    color:white;
+    border-radius: 50px;
+}
