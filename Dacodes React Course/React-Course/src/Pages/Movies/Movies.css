@@ -1,15 +1,16 @@
-.movies{
+.movies {
     display: flex;
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    column-gap:2rem;
-    row-gap:2rem;
-    flex-wrap:wrap;
+    column-gap: 2rem;
+    row-gap: 4rem;
+    flex-wrap: wrap;
     padding-right: 10%;
+    padding-top: 200px;
 }
 
-.movie_card{
+.movie_card {
     display: flex;
     justify-content: center;
     width: 253px;
@@ -18,29 +19,75 @@
     border-radius: 50px;
     overflow: hidden;
 
+
 }
 
-.movie_card img{
+.movie_card img {
     width: 100%;
     object-fit: cover;
 }
 
-.movie_card:hover .movie_cover{
-    opacity:100%;
+.movie_card:hover .movie_cover {
+    opacity: 100%;
 }
 
-.movie_card .movie_cover{
+.movie_card .movie_cover {
     position: absolute;
     display: flex;
     width: 253px;
     height: 367px;
     justify-content: center;
     align-items: center;
-    background-color: #111;
+    background-color: rgba(81, 65, 234, 0.80);
     opacity: 0%;
     transition: .3s;
     flex-direction: column;
-    font-size: 18px;
-    color:white;
+    color: white;
     border-radius: 50px;
+
+}
+
+.movie_title {
+    color: #FFF;
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 127.5%;
+    margin-top: 5rem;
+    margin-bottom: 0rem;
+    max-width: 200px;
+}
+
+.movie_data {
+    color: #FFF;
+    text-align: justify;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 127.5%;
+    margin-bottom: 0rem;
+    max-width: 200px;
+
+}
+
+.movie_overview {
+    margin: 10%;
+    overflow: hidden;
+    text-align:justify;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 127.5%;
+    max-width: 200px;
+
+}
+
+.movie_stars img {
+    width: 20%;
+    height: auto;
 }
