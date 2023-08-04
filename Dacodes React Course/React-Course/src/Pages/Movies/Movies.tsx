@@ -31,6 +31,7 @@ const Movies = () => {
     const response = await NewInstance.get(genresEP);
     return response;
   };
+
   useEffect(() => {
     getMovies().then((r) => {
       setTotalPages(r.data.total_pages);
@@ -44,7 +45,9 @@ const Movies = () => {
   useEffect(() => {
     getMovies().then((r) => {
       setResponse(r.data);
-      setIsLoading(false);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 300);
     }).catch((e) => {
       console.log(e);
     });
@@ -53,13 +56,23 @@ const Movies = () => {
   useEffect(() => {
     getGenres().then((r) => {
       setGenres(r.data);
-      setLoadingGenres(false);
+      setTimeout(() => {
+        setLoadingGenres(false);
+      }, 300);
+
     }).catch((e) => {
       console.log(e);
     });
   }, [])
 
+   if (LoadingGenres && isLoading) {
+
+    return <div className="App"></div>;
+  }
+  console.log({isLoading,LoadingGenres});
+
   const listMovies = () => {
+    console.log(sessionStorage.getItem("guest_session_id"));
     const listingComponents = response.results.map((movie: objectI) => (
       <div className="movie_card">
         <img src={posterEP + movie.poster_path} />
@@ -74,11 +87,6 @@ const Movies = () => {
       </div>
     ))
     return listingComponents;
-  }
-
-
-  if (isLoading && LoadingGenres) {
-    return <div className="App"></div>;
   }
 
   return (

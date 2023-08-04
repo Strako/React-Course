@@ -76,7 +76,7 @@
 .movie_overview {
     margin: 10%;
     overflow: hidden;
-    text-align:justify;
+    text-align: justify;
     color: #FFF;
     font-family: Poppins;
     font-size: 10px;
@@ -84,7 +84,10 @@
     font-weight: 400;
     line-height: 127.5%;
     max-width: 200px;
-
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
 }
 
 .movie_stars img {
