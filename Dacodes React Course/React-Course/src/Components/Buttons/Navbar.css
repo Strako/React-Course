@@ -1,33 +1,57 @@
-.button-navbar{
-border-radius: 50px;
-width: 220px;
-height: 50px;
-background: linear-gradient(120.2102deg, rgba(58, 227, 195, 0.61) 60.25%, rgba(78, 108, 228, 0.84358) 89.39%, #563FF0 100%);
-outline: none;
-border: inherit;
-color: #FFF;
-font-family: Poppins;
-font-size: 30px;
-font-style: normal;
-font-weight: 500;
-line-height: 120%;
-cursor: pointer;
-margin-left: 40px;
-margin-right: 40px;
+.button-navbar {
+    border-radius: 50px;
+    width: 220px;
+    height: 50px;
+    background: linear-gradient(120.2102deg, rgba(58, 227, 195, 0.61) 60.25%, rgba(78, 108, 228, 0.84358) 89.39%, #563FF0 100%);
+    outline: none;
+    border: inherit;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    cursor: pointer;
+    margin-left: 40px;
+    margin-right: 40px;
 }
-.button-navbar:hover:enabled{
+
+@media (max-width: 1510px) {
+    .button-navbar {
+        border-radius: 50px;
+        width: 220px;
+        height: 50px;
+        background: linear-gradient(120.2102deg, rgba(58, 227, 195, 0.61) 60.25%, rgba(78, 108, 228, 0.84358) 89.39%, #563FF0 100%);
+        outline: none;
+        border: inherit;
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+}
+
+
+.button-navbar:hover:enabled {
     transition: transform 0.2s ease-in-out;
     transform: scale(0.97);
 }
 
-.button-navbar:active:enabled{
+.button-navbar:active:enabled {
     background: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
 }
-.button-navbar:hover:disabled{
+
+.button-navbar:hover:disabled {
     cursor: default;
 }
 
-.button-navbar:disabled{
+.button-navbar:disabled {
     background: #563FF0;
 }
