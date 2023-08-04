@@ -1,7 +1,7 @@
 .button-navbar{
 border-radius: 50px;
-width: 243.77px;
-height: 64px;
+width: 220px;
+height: 50px;
 background: linear-gradient(120.2102deg, rgba(58, 227, 195, 0.61) 60.25%, rgba(78, 108, 228, 0.84358) 89.39%, #563FF0 100%);
 outline: none;
 border: inherit;
@@ -12,8 +12,8 @@ font-style: normal;
 font-weight: 500;
 line-height: 120%;
 cursor: pointer;
-margin-left: 65px;
-margin-right: 69px;
+margin-left: 40px;
+margin-right: 40px;
 }
 .button-navbar:hover:enabled{
     transition: transform 0.2s ease-in-out;
