@@ -1,3 +1,36 @@
+.navbar {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10%;
+}
+
+.page_title {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    padding-top: 100px;
+    padding-left: 110px;
+
+}
+
+.navbar a {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    padding: 120px;
+}
+
+
 .movies {
     display: flex;
     min-height: 100vh;
@@ -7,7 +40,7 @@
     row-gap: 4rem;
     flex-wrap: wrap;
     padding-right: 10%;
-    padding-top: 200px;
+    padding-top: 100px;
 }
 
 .movie_card {
@@ -77,7 +110,6 @@
     margin: 10%;
     overflow: hidden;
     text-align: justify;
-    color: #FFF;
     font-family: Poppins;
     font-size: 10px;
     font-style: normal;
@@ -95,4 +127,59 @@
 .movie_stars img {
     width: 20%;
     height: auto;
+}
+
+.arrow_container {
+    margin-top: 5rem;
+    margin-right: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.left_arrow_active {
+    width: 55px;
+    height: 55px;
+    background-color: #5141ea;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.left_arrow_inactive {
+    width: 55px;
+    height: 55px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+.right_arrow_active {
+    width: 55px;
+    height: 55px;
+    background-color: #5141ea;
+    border-radius: 50%;
+    cursor: pointer;
+
+
+}
+
+.right_arrow_inactive {
+    width: 55px;
+    height: 55px;
+    background-color: gray;
+    border-radius: 50%;
+
+
+}
+
+.pages_container {
+    margin: 2rem;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    /* 45px */
 }
